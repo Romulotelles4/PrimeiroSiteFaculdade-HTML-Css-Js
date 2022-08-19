@@ -1,0 +1,579 @@
+:root {
+  /*
+
+    Guardando cores em váriaveis
+
+    */
+
+  /*Cores de contraste Neon*/
+  --void: #0e0b16;
+  --fuschia: #a239ca;
+  --jewel: #4717f6;
+  --stark: #e7dfdd;
+
+  /*Cores de contraste Elegantes*/
+  --ivory-black: #1d2731;
+  --gold-leaf: #d9b310;
+  --sky-blue: #328cc1;
+  --prussian-blue: #0b3c5d;
+
+  /*Cores de contraste Tempestuosos*/
+  --evening: #192231;
+  --cloud: #98878f;
+  --stormy: #494e6b;
+
+  /*
+    
+    Guardando fonts em váriaveis
+
+    */
+
+  /*Fontes*/
+  --text: "Baloo Tammudu 2", cursive;
+  --title: "Roboto Condensed", sans-serif;
+}
+
+/*
+
+CONFIGURAÇÃO GERAL DA PÁGINA
+
+*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*{
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 6rem;
+}
+
+html {
+  /*O tamanho base das fonts desse HTML é agora 10px, ao invés de 16px*/
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+body {
+  /*1 rem = 16px, agora com a mudança no HTML, é 10px, ou seja, com o 2.1rem, temos agora 21px (2.1x10)*/
+  font-size: 2rem;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+
+
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+CONFIGURAÇÃO DOS PARAGRAFOS, TITULOS, IMAGENS, HEADERS, SECTIONS E LINKS
+
+*/
+
+h1,
+h2,
+h3,
+p {
+  max-width: 70ch;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  padding: 1rem 1rem;
+  font-family: var(--title);
+  font-weight: bold;
+  font-weight: 900;
+}
+
+p {
+  padding: 1rem 1rem;
+  font-family: var(--text);
+}
+
+header,
+section {
+  padding: 10rem 2rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5%;
+  box-shadow: 0 4px 9px 1px var(--evening);
+}
+
+a {
+  text-decoration: none;
+  color: var(--stark);
+  transition: 0.450ms;
+  text-align: center;
+}
+
+a:hover {
+  text-shadow: 0 0 4.5px var(--gold-leaf);
+  transition-timing-function: ease-in;
+}
+
+a:active {
+  text-shadow: 0 0 4.5px var(--gold-leaf);
+  transition-timing-function: ease-in;
+}
+
+.container-header.middle{
+  line-height: 1.9;
+}
+
+
+.header-bottom{
+  font-family: var(--text);
+  color: var(--void);
+  text-align: center;
+  font-size: 1em;
+  margin-top: 10rem;
+  border-bottom: 2px inset var(--gold-leaf);
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+
+
+
+
+Para frases importantes abaixo!
+*/
+
+/* .important{
+  color: var(--stark);
+  border: 0.1rem inset var(--gold-leaf);
+  background-color: var(--void);
+  width: 30px;
+
+}
+.quote{
+  border: 0.3rem inset var(--gold-leaf);
+} */
+
+/*
+
+
+
+
+
+CORES E BORDAS DA IMAGEM E SEÇÕES DA PÁGINA E TAMBEM AS BARRAS AZUL DO TITULO
+
+*/
+
+.container-header{
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.border-title{
+  
+  border-top: 0.2rem outset var(--gold-leaf);
+}
+
+.bg-dark {
+  /*background-color: var(--void);*/
+  background-image: linear-gradient(
+    to right top,
+    var(--void) 48.5rem,
+    var(--stormy)
+  );
+  box-shadow: 0 5px 25px 0 var(--stormy);
+}
+
+.bg-dark p {
+  color: var(--gold-leaf);
+}
+
+.bg-dark h2 {
+  color: var(--stark);
+}
+
+.row-image-1 {
+  /*background-color: var(--void);*/
+  background-image: linear-gradient(
+    to left bottom,
+    var(--void) 48.5rem,
+    var(--stormy)
+  );
+  box-shadow: 0 5px 25px 0 var(--stormy);
+}
+
+.row-image-1 p {
+  color: var(--gold-leaf);
+}
+
+.row-image-1 h3 {
+  color: var(--stark);
+}
+
+.row-image-3 {
+  /*background-color: var(--void);*/
+  background-image: linear-gradient(
+    to bottom right,
+    var(--void) 48.5rem,
+    var(--stormy)
+  );
+  box-shadow: 0 5px 25px 0 var(--stormy);
+}
+
+.row-image-3 p {
+  color: var(--gold-leaf);
+}
+
+.row-image-3 h3 {
+  color: var(--stark);
+}
+
+.container-header1 h1 {
+  font-size: 7.5rem;
+  padding: 2.19rem;
+  position: relative;
+  display: inline-block;
+}
+
+.container-header1 h1::after {
+  content: "de informação";
+  background-color: var(--jewel);
+  color: var(--gold-leaf);
+  padding: 0.1rem 0.1rem;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+}
+
+.container-header1 h1::before {
+  content: "";
+  display: block;
+  height: 50%;
+  width: 100%;
+  background-color: var(--jewel);
+  position: absolute;
+  left: -65%;
+  top: 0;
+  transform: translateX(-50%);
+  transition: ease 250ms;
+}
+
+.colunas h2::after {
+  content: "<- Clique!";
+  background-color: var(--jewel);
+  color: var(--gold-leaf);
+  padding: 0.1rem 0.1rem;
+  margin: 0 1rem;
+  font-size: 1.8rem;
+}
+
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+ALINHAMENTO CENTRAL DE TEXTOS, TITULOS E UM PADDING PARA OS TITULOS DA SEÇÃO ESCURA
+
+*/
+.text-center {
+  text-align: center;
+}
+
+.text-title {
+  padding-left: 9rem;
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+TORNANDO AS DIVS FLEXIVEIS E AS TRASFORMANDO EM COLUNAS (PARTE ESCURA NO INICIO DA PÁGINA)
+
+*/
+.colunas {
+  display: flex;
+  gap: 1em;
+}
+
+.colunas > * {
+  flex-basis: 100%;
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+COLOCANDO EM LINHA(UMA EM CIMA DA OUTRA) AS DIVS COM AS IMAGENS E TEXTO
+CONFIGURAÇÃO DOS CONTAINERS E FOOTER
+
+*/
+.dois-col {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  line-height: 1.7;
+}
+
+.container {
+  margin-inline: auto;
+}
+
+.container-col {
+  width: 90%;
+  max-width: 125rem;
+  margin-inline: auto;
+}
+
+.container-header1 {
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 3rem;
+  font-size: 1.8rem;
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+MEDIA QUERIES (RESPONSIVE)
+
+TORNA EM COLUNA A PRIMEIRA PARTE ESCURA DA PÁGINA E A PARTE COM AS IMAGENS TAMBÉM 
+
+***QUANDO A TELA FOR MENOR QUE 800px
+
+*/
+@media (max-width: 800px) {
+  .dois-col {
+    padding: 1rem 1rem;
+    flex-direction: column;
+  }
+
+  .text-title {
+    font-size: 2.3rem;
+  }
+  .container-header1 h1 {
+    font-size: 4.1rem;
+    transition: ease 250ms;
+  }
+
+  div.container-header.middle p {
+    padding-top: 3rem;
+  }
+
+  div.dois-col p {
+    padding-top: 3rem;
+  }
+}
+
+/*
+
+DIMINUI O TAMANHO DOS TITULOS DOS LINKS
+
+***QUANDO A TELA FOR MENOR QUE 1079px
+
+*/
+
+@media (max-width: 1079px) {
+  .text-title {
+    font-size: 2.3rem;
+  }
+}
+
+/*
+
+TORNA EM COLUNA A PRIMEIRA PARTE ESCURA DA PÁGINA
+
+***QUANDO A TELA FOR MENOR QUE 975px
+
+*/
+
+@media (max-width: 975px) {
+  .colunas {
+    padding: 1rem 1rem;
+    flex-direction: column;
+  }
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+AUMENTA A BARRA AZUL AO LADO DO TITULO PARA O MESMO CONTINUAR NA TELA
+
+***QUANDO A TELA FOR MENOR QUE 870px
+
+*/
+
+@media (max-width: 870px) {
+  .container-header h1::before {
+    width: 130%;
+
+    transition: ease 250ms;
+  }
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+MUDA A CONFIGURAÇÃO DE TEXTO E ESPAÇAMENTO DE LINHA PARA FICAR MELHOR (TALVEZ)
+
+***QUANDO A TELA FOR MENOR QUE 895px
+
+*/
+
+@media (max-width: 895px) {
+  .dois-col p {
+    max-width: 100ch;
+    line-height: 1.6;
+  }
+
+  body {
+    line-height: 1.57;
+  }
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+MUDA A CONFIGURAÇÃO DE TEXTO DO FOOTER E DO TITULO DA PÁGINA PARA FICAR MELHOR (TALVEZ)
+
+***QUANDO A TELA FOR MENOR QUE 320px
+
+*/
+@media (max-width: 320px) {
+  .container-footer {
+    font-size: 1.45rem;
+    text-align: center;
+  }
+
+  .container-header1 h1 {
+    font-size: 3.14rem;
+    transition: ease 250ms;
+  }
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+MUDA O TAMANHO DOS TITULOS LINKS PARA QUE NÃO QUEBREM LINHA
+
+***QUANDO A TELA FOR MENOR QUE 364px
+
+*/
+
+@media (max-width: 364px) {
+  .text-title {
+    position: relative;
+    left: -25%;
+    width: 125%;
+  }
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+/*
+
+MUDA A CONFIGURAÇÃO DE TEXTO GERAL E DOS TITULOS LINKS PARA NÃO QUEBRAREM LINHA PARA FICAR MELHOR (TALVEZ)
+
+***QUANDO A TELA FOR MENOR QUE 280px
+
+*/
+
+@media (max-width: 280px) {
+  .colunas p {
+    font-size: 1.5rem;
+  }
+
+  .container p {
+    font-size: 1.5rem;
+  }
+  .container-header p {
+    font-size: 1.53rem;
+  }
+  .dois-col p {
+    font-size: 1.35rem;
+  }
+
+  .container-footer {
+    font-size: 1.35rem;
+  }
+
+  .text-title {
+    width: 140%;
+    
+  }
+}
+/*
+
+-------------------------------------------------------------------------------------
+
+*/
+
+
+
+.button{
+  background-color: #192231 ;
+  color:var(--gold-leaf);
+  border-radius: 5px;
+  width: 50px;
+}
+
+
+.text-title-footer{
+  padding-top: 4rem;
+  align-items: center;
+}

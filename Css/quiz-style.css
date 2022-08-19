@@ -1,0 +1,195 @@
+:root {
+  /*
+
+    Guardando cores em váriaveis
+
+    */
+
+  /*Cores de contraste Neon*/
+  --void: #0e0b16;
+  --fuschia: #a239ca;
+  --jewel: #4717f6;
+  --stark: #e7dfdd;
+
+  /*Cores de contraste Elegantes*/
+  --ivory-black: #1d2731;
+  --gold-leaf: #d9b310;
+  --sky-blue: #328cc1;
+  --prussian-blue: #0b3c5d;
+
+  /*Cores de contraste Tempestuosos*/
+  --evening: #192231;
+  --cloud: #98878f;
+  --stormy: #494e6b;
+
+  /*
+    
+    Guardando fonts em váriaveis
+
+    */
+
+  /*Fontes*/
+  --text: "Baloo Tammudu 2", cursive;
+  --title: "Roboto Condensed", sans-serif;
+}
+
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+
+
+html{
+	line-height: 1.5;
+	font-size: 62.5%;
+}
+
+body{
+	max-width: 100%;
+    overflow-x: hidden;
+	font-size: 2rem;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  max-width: 70ch;
+}
+
+h1,h2,h3{
+	font-size: 5.5rem;
+  font-family: var(--title);
+}
+
+
+section {
+  padding: 4rem 2rem;
+}
+
+header{
+    padding-top: 10rem;
+	padding-bottom: 4rem;
+}
+
+
+
+.section-main{
+	background-color: var(--void);
+	color: var(--gold-leaf);
+}
+
+.footer-main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem;
+}
+
+#quiz{
+	font-family: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container-header{
+	text-align: center;
+}
+
+.container-main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.answers {
+  padding: 0.9rem;
+	margin-bottom: 2rem;
+}
+
+
+.buttonResultado{
+  background-color: #192231 ;
+  color:var(--gold-leaf);
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+}
+
+
+#results{
+	font-family: var(--title);
+	font-size: 3rem;
+}
+
+
+.intro{
+	font-size: 7.5rem;
+  padding: 2.19rem;
+	position: relative;
+  
+}
+
+.intro::before{
+  content: "";
+  display: block;
+  height: 50%;
+  width: 100%;
+  background-color: var(--jewel);
+  position: absolute;
+  left: -65%;
+  top: 0;
+  transform: translateX(-15%);
+  transition: ease 250ms;
+}
+button{
+  text-decoration: none;
+  color: var(--stark);
+  transition: 0.450ms;
+  text-align: center;
+}
+
+button:hover {
+  text-shadow: 0 0 4.5px var(--gold-leaf);
+  transition-timing-function: ease-in;
+}
+
+@media (max-width:1250px) {
+  .intro::before{
+      transform: translateX(-25%); 
+  }
+}
+
+@media (max-width:600px) {
+  .intro::before{
+     display: none;
+  }
+  
+  
+  #submit{
+    font-size: 3rem;
+    padding: 1rem 1rem;
+    margin-bottom: 1em;
+  }
+
+  
+  
+  input[type="radio"]{
+    transform: scale(1.2);
+  }
+  
+  #results{
+	font-family: var(--title);
+	font-size: 7rem;
+  }
+}
